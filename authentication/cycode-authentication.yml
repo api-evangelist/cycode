@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.cycode.com/
+docs: https://docs.cycode.com/
+summary:
+  types: [apiToken, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [clientCredentials, browser]
+schemes:
+  - name: apiToken
+    type: apiKey
+    in: header
+    scheme: bearer
+    description: >-
+      A Client ID + Client Secret (personal access token) is exchanged for a
+      short-lived JWT at POST /api/v1/auth/api-token; the JWT is sent as a
+      Bearer token on subsequent Cycode REST API requests.
+    sources: [docs.cycode.com]
+  - name: oauth2-cli
+    type: oauth2
+    flow: clientCredentials
+    description: >-
+      The cycode CLI authenticates with a browser OAuth login (`cycode auth`)
+      or with CYCODE_CLIENT_ID / CYCODE_CLIENT_SECRET client credentials.
+    sources: [github.com/cycodehq/cycode-cli]
