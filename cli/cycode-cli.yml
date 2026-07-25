@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cycodehq/cycode-cli
+name: Cycode CLI
+binary: cycode
+repo: https://github.com/cycodehq/cycode-cli
+package: https://pypi.org/project/cycode/
+install:
+  - method: pip
+    command: pip install cycode
+  - method: homebrew
+    command: brew install cycode
+  - method: github-releases
+    command: download executable from https://github.com/cycodehq/cycode-cli/releases
+authentication:
+  - command: cycode auth
+    description: Browser-based OAuth login associating the machine with a Cycode account (recommended)
+  - command: cycode configure
+    description: Interactive setup of Client ID / Client Secret and base URL
+  - method: environment
+    variables: [CYCODE_CLIENT_ID, CYCODE_CLIENT_SECRET, CYCODE_ID_TOKEN]
+commands:
+  - name: auth
+    description: Authenticate the machine to associate the CLI with a Cycode account
+  - name: configure
+    description: Configure Client ID, Client Secret and Cycode URLs
+  - name: scan
+    description: Scan content for Secrets / IaC / SCA / SAST violations
+    scan_types: [secret, iac, sca, sast]
+    default_scan_type: secret
+    targets: [repository, path, commit-history, pre-commit, pre-push]
+  - name: report
+    description: Generate reports (SBOM)
+  - name: ignore
+    description: Suppress / ignore specific findings
+  - name: mcp
+    description: Start the Model Context Protocol server exposing Cycode scanning to AI tools (Python 3.10+)
+  - name: status
+    description: Display CLI version and authentication status

@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cycodehq/cycode-cli
+packages:
+  - language: python
+    registry: pypi
+    name: cycode
+    url: https://pypi.org/project/cycode/
+    install: pip install cycode
+    official: true
+    kind: cli
+    python_requires: ">=3.9"
+    notes: >-
+      First-party Cycode CLI (SAST, SCA, Secrets, IaC scanning + report + MCP
+      server). Latest 3.17.2 (2026-07-13). Not a REST client SDK; the binary is
+      catalogued as a CLI in cli/cycode-cli.yml.
+  - language: shell
+    registry: homebrew
+    name: cycode
+    url: https://formulae.brew.sh/formula/cycode
+    install: brew install cycode
+    official: true
+    kind: cli
+  - language: binary
+    registry: github-releases
+    name: cycode-cli
+    url: https://github.com/cycodehq/cycode-cli/releases
+    install: download OS/arch executable from GitHub Releases
+    official: true
+    kind: cli

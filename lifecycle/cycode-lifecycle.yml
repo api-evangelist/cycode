@@ -1,0 +1,13 @@
+generated: '2026-07-18'
+method: searched
+source: https://status.cycode.com/
+status_page: https://status.cycode.com/
+versioning:
+  scheme: uri-path
+  observed: [v1, v2]
+  notes: REST API paths observed under /api/v1 and report API under /report/api/v2
+deprecation:
+  policy_url: null
+  sunset_header: null
+sla:
+  url: null

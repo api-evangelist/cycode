@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: probed
+source: live probes of Cycode hosts
+notes: >-
+  No genuine .well-known discovery documents are publicly served. The docs and
+  app hosts return HTTP 200 for arbitrary /.well-known paths, but the body is a
+  Keycloak/SPA login shell (not a real security.txt / OIDC document), so those
+  are recorded as false-200 and not saved as artifacts.
+hosts:
+  - host: https://cycode.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://docs.cycode.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        real: false
+        note: returns Keycloak login HTML, not RFC 9116 security.txt
+  - host: https://app.cycode.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        real: false
+        note: returns SPA app shell, not an OIDC discovery document
+  - host: https://api.cycode.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 403

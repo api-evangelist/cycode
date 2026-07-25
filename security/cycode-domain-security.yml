@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: cycode.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 19 07:55:36 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: cycode.com
+  dnssec: true
+  caa:
+  - 0 issue "awstrust.com"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  - 0 iodef "mailto:security@cycode.com"
+  - 0 issue "amazon.com"
+  - 0 issue "amazonaws.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

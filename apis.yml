@@ -1,8 +1,28 @@
 aid: cycode
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cycode.png
 name: Cycode
-description: 'Cycode is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Cycode is a complete Application Security Posture Management (ASPM) and software
+  supply chain security platform that delivers visibility, security, and integrity
+  across the entire software development lifecycle. Its Risk Intelligence Graph
+  (RIG) correlates findings from SAST, SCA, secrets, IaC, and container scanning
+  into a single risk model. Cycode exposes a REST API and webhooks, an official
+  command-line interface (the `cycode` CLI for pip/Homebrew), and an official
+  Model Context Protocol (MCP) server for AI-assisted scanning. Founded in 2019
+  and backed by Insight Partners, Cycode is certified SOC 2 Type II, ISO 27001,
+  and CSA STAR Level 1. This profile was enriched by the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/cycode/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +32,36 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cybersecurity
-apis: []
+- Application Security
+- Software Supply Chain Security
+- ASPM
+- DevSecOps
+- Secrets Scanning
+- SAST
+- SCA
+- Developer Tools
+- MCP
+- CLI
+apis:
+- name: Cycode API
+  description: >-
+    Cycode's REST API and webhooks for the ASPM / software supply chain security
+    platform, including the Risk Intelligence Graph (RIG) reporting API. JWT
+    bearer authentication obtained by exchanging a Client ID + Client Secret.
+  humanURL: https://docs.cycode.com/
+  baseURL: https://api.cycode.com
+  tags:
+  - Application Security
+  - Software Supply Chain Security
+  properties:
+  - type: Documentation
+    url: https://docs.cycode.com/
+  - type: Authentication
+    url: authentication/cycode-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +70,52 @@ maintainers:
 common:
 - type: Website
   url: https://cycode.com/
+- type: DeveloperPortal
+  url: https://docs.cycode.com/
+- type: Documentation
+  url: https://docs.cycode.com/
+- type: APIReference
+  url: https://docs.cycode.com/
+- type: Blog
+  url: https://cycode.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/cycodehq
+- type: Pricing
+  url: https://cycode.com/pricing/
+- type: SignUp
+  url: https://cycode.com/free-trial/
+- type: TermsOfService
+  url: https://cycode.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://cycode.com/privacy-policy/
+- type: StatusPage
+  url: https://status.cycode.com/
+- type: TrustCenter
+  url: https://cycode.com/trust/
+- type: Compliance
+  url: https://cycode.com/trust/
+- type: Security
+  url: https://cycode.com/bug-bounty/
+- type: CLI
+  url: cli/cycode-cli.yml
+- type: Packages
+  url: packages/cycode-packages.yml
+- type: MCPServer
+  url: mcp/cycode-mcp.yml
+- type: Authentication
+  url: authentication/cycode-authentication.yml
+- type: Lifecycle
+  url: lifecycle/cycode-lifecycle.yml
+- type: Conformance
+  url: conformance/cycode-conformance.yml
+- type: DomainSecurity
+  url: security/cycode-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/cycode-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/cycode-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
