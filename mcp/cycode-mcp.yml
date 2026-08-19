@@ -8,20 +8,27 @@ server:
   official: true
   shipped_in: cycode CLI (>=3.x, Python 3.10+)
   launch: cycode mcp
-  transport: [stdio, sse, streamable-http]
+  transport:
+  - stdio
+  - sse
+  - streamable-http
   default_transport: stdio
-  description: >-
-    Official Cycode MCP server, shipped inside the cycode CLI, exposing Cycode's
-    security scanning capabilities to AI assistants and agents. Started locally
-    with `cycode mcp`; not a hosted remote endpoint.
+  description: Official Cycode MCP server, shipped inside the cycode CLI, exposing Cycode's security scanning
+    capabilities to AI assistants and agents. Started locally with `cycode mcp`; not a hosted remote endpoint.
 tools:
-  - name: cycode_secret_scan
-    description: Scan content for hardcoded secrets
-  - name: cycode_sca_scan
-    description: Software Composition Analysis (dependency) scan
-  - name: cycode_iac_scan
-    description: Infrastructure-as-Code misconfiguration scan
-  - name: cycode_sast_scan
-    description: Static Application Security Testing scan
-  - name: cycode_status
-    description: Report CLI version and authentication status
+- name: cycode_secret_scan
+  description: Scan content for hardcoded secrets
+- name: cycode_sca_scan
+  description: Software Composition Analysis (dependency) scan
+- name: cycode_iac_scan
+  description: Infrastructure-as-Code misconfiguration scan
+- name: cycode_sast_scan
+  description: Static Application Security Testing scan
+- name: cycode_status
+  description: Report CLI version and authentication status
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
