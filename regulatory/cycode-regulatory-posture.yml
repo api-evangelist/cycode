@@ -1,0 +1,40 @@
+generated: '2026-10-04'
+method: searched
+source: https://cycode.com/privacy-policy/
+signals:
+  data_subject_request:
+    quote: "You have the right to request that we rectify any Personal Data we hold that is inaccurate or misleading; You have the right to request the erasure/deletion of your Personal Data (e.g. from our records)."
+    url: https://cycode.com/privacy-policy/
+    http_status: 200
+    fetched: true
+    note: Provides data subject rights to rectify and erase personal data.
+  data_retention:
+    quote: "We may store your Personal Data for as long as such Personal Data is necessary in accordance with the purpose for which we collected it... In certain circumstances we may store your Personal Data for longer periods of time, for example where we are required to do so in accordance with legal, regulatory, tax or accounting requirements..."
+    url: https://cycode.com/privacy-policy/
+    http_status: 200
+    fetched: true
+    note: Describes retention periods and legal obligations.
+  subprocessors:
+    quote: "Cycode has partnered with a number of selected service providers... These may include service providers of the following services: hosting / storage, email distribution and monitoring, authentication, support and ticketing, logging and monitoring, CRM, data enrichment, ..."
+    url: https://cycode.com/privacy-policy/
+    http_status: 200
+    fetched: true
+    note: Lists third‑party service providers (sub‑processors).
+  data_residency:
+    quote: "Cycode Ltd. is based in Israel... your Personal Data is stored in data centers of our cloud hosting third party service providers that are located in the United States of America."
+    url: https://cycode.com/privacy-policy/
+    http_status: 200
+    fetched: true
+    note: Indicates data residency locations (US and Israel).
+  incident_notification:
+    quote: "To the extent necessary and subject to applicable law, Cycode may disclose or otherwise allow access to any categories of Personal Data ... to regulators, courts or competent authorities, pursuant to valid legal requests..."
+    url: https://cycode.com/privacy-policy/
+    http_status: 200
+    fetched: true
+    note: Commitment to disclose data to authorities, implying incident handling.
+  global_privacy_control:
+    quote: "We also have a right to request certain details of the basis on which your Personal Data is transferred outside the European Economic Area."
+    url: https://cycode.com/privacy-policy/
+    http_status: 200
+    fetched: true
+    note: Mentions GDPR cross‑border transfer details.
