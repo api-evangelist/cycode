@@ -1,0 +1,36 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=9f04baf8-3d37-4a71-aefd-a88a0682f077
+  listing_count: 1
+  apps:
+  - Cycode
+  seller_name: Cycode
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=seller-6xu4nv26nj3vq
+  listing_count: 1
+  apps:
+  - Cycode
+  seller_name: Cycode
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
